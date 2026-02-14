@@ -1,0 +1,92 @@
+{
+  "layer": "top",
+  "position": "top",
+  "reload_style_on_change": true,
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "network",
+    "custom/vpn",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "cpu",
+    "memory",
+    "custom/power"
+  ],
+  "sway/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "focused": "",
+      "default": ""
+    }
+  },
+  "clock": {
+    "timezone": "Asia/Chongqing",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%d/%m - %H:%M}"
+  },
+  "network": {
+    "format-wifi": "󰤢 {bandwidthDownBits}",
+    "format-ethernet": "󰈀 {bandwidthDownBits}",
+    "format-disconnected": "󰤠 No Network",
+    "interval": 5,
+    "hide-empty-text": true,
+    "tooltip": false
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Usage at {usage}%"
+  },
+  "memory": {
+    "interval": 30,
+    "format": " ",
+    "tooltip": true,
+    "tooltip-format": "{used:0.1f}/{total:0.1f} GB"
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "default": ["", "", " "]
+    },
+    "on-click": "pavucontrol",
+    "tooltip": true,
+    "tooltip-format": "Volume set at {volume}%"
+  },
+  "battery": {
+    "states": {
+      "good": 80,
+      "warning": 20,
+      "critical": 5
+    },
+    "format": "{icon}",
+    "format-plugged": "",
+    "format-charging": "",
+    "format-icons": ["", "", "", "", ""],
+    "format-alt": "{time} {icon}",
+    "tooltip": true,
+    "tooltip-format": "Battery at {capacity}%"
+  },
+  "backlight": {
+    "format": "{icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "tooltip": true,
+    "tooltip-format": "Screen backlight at {percent}%"
+  },
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout &",
+    "format": "⏻"
+  },
+  "custom/vpn": {
+    "format": " {text}",
+    "interval": 5,
+    "exec": "$HOME/.config/waybar/expressvpnctl_module.sh 2> /dev/null",
+    "exec-if": "pgrep expressvpn",
+    "return-type": "json"
+  }
+}
