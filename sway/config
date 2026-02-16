@@ -135,12 +135,13 @@ output "Unknown-1" {
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     # Lighning-related keys in keyboard bindings
-    bindsym XF86MonBrightnessUp exec brightnessctl s 500+
-    bindsym XF86MonBrightnessDown exec brightnessctl s 500-
-
-    # Lighning-related keys in keyboard bindings
     bindsym XF86KbdBrightnessUp exec brightnessctl s 100+ -d 'smc::kbd_backlight'
     bindsym XF86KbdBrightnessDown exec brightnessctl s 100- -d 'smc::kbd_backlight'
+
+    # Keyboard bindings for rmpc
+    bindsym XF86AudioPrev exec mpc prev
+    bindsym XF86AudioPlay exec mpc toggle
+    bindsym XF86AudioNext exec mpc next
 
     # Sound-related keys in keyboard bindings
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -191,11 +192,6 @@ output "Unknown-1" {
     bindsym $mod+Shift+3 move container to workspace number 3
     bindsym $mod+Shift+4 move container to workspace number 3
 
-    # Keyboard bindings for workspace
-    # I need to find something better for these...
-    bindsym XF86AudioPrev workspace number 1
-    bindsym XF86AudioPlay workspace number 2
-    bindsym XF86AudioNext workspace number 3
 #
 # Layout stuff:
 #
