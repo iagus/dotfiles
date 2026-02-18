@@ -5,6 +5,7 @@
   "modules-left": ["sway/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
+    "custom/keyboard",
     "network",
     "custom/vpn",
     "pulseaudio",
@@ -88,5 +89,12 @@
     "exec": "$HOME/.config/waybar/expressvpnctl_module.sh 2> /dev/null",
     "exec-if": "pgrep expressvpn",
     "return-type": "json"
+  },
+  "custom/keyboard": {
+    "format": "{text}",
+    "interval": 1,
+
+    // position 1 in returning json IS the keyboard
+    "exec": "jq -r '.[1].xkb_active_layout_name' <(swaymsg --raw -t get_inputs)"
   }
 }
