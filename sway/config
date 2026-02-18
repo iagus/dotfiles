@@ -138,8 +138,8 @@ output "Unknown-1" {
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     # Lighning-related keys in keyboard bindings
-    bindsym XF86KbdBrightnessUp exec brightnessctl s 100+ -d 'smc::kbd_backlight'
-    bindsym XF86KbdBrightnessDown exec brightnessctl s 100- -d 'smc::kbd_backlight'
+    bindsym XF86MonBrightnessUp exec brightnessctl s 500+
+    bindsym XF86MonBrightnessDown exec brightnessctl s 500-
 
     # Keyboard bindings for rmpc
     bindsym XF86AudioPrev exec mpc prev
