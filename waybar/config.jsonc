@@ -93,6 +93,7 @@
   "custom/keyboard": {
     "format": "{text}",
     "interval": 1,
+    "tooltip": false,
 
     // position 1 in returning json IS the keyboard
     "exec": "jq -r '.[1].xkb_active_layout_name' <(swaymsg --raw -t get_inputs)"
