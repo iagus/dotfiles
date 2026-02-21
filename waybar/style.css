@@ -28,7 +28,12 @@
 }
 
 #custom-power {
-  padding-left: .9rem;
+  padding-left: .4rem;
+}
+
+#clock {
+  padding: 0 .7rem;
+  font-size: 13px;
 }
 
 #memory {
@@ -79,4 +84,8 @@
 
 #custom-keyboard {
   padding: 0 .3rem;
+}
+
+#custom-mpd {
+  font-size: 14px;
 }

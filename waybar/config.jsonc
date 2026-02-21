@@ -3,7 +3,7 @@
   "position": "top",
   "reload_style_on_change": true,
   "modules-left": ["sway/workspaces"],
-  "modules-center": ["clock"],
+  "modules-center": ["custom/mpd"],
   "modules-right": [
     "custom/keyboard",
     "network",
@@ -13,6 +13,7 @@
     "battery",
     "cpu",
     "memory",
+    "clock",
     "custom/power"
   ],
   "sway/workspaces": {
@@ -25,7 +26,7 @@
   "clock": {
     "timezone": "Asia/Chongqing",
     "tooltip-format": "<big>Day {:%d}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%d/%m - %H:%M}"
+    "format": "{:%H:%M}"
   },
   "network": {
     "format-wifi": "󰤢 ",
@@ -92,11 +93,18 @@
     "on-click": "$HOME/.config/waybar/expressvpnctl_module.sh 2> /dev/null"
   },
   "custom/keyboard": {
-    "format": "{text}",
+    "format": "{text} |",
     "interval": 1,
     "tooltip": false,
 
     // position 1 in returning json IS the keyboard
     "exec": "jq -r '.[1].xkb_active_layout_name' <(swaymsg --raw -t get_inputs)"
+  },
+  "custom/mpd": {
+    "format": "♪ {text}",
+    "interval": 10,
+    "exec": "mpc current",
+    "exec-if": "pgrep mpd",
+    "on-click": "mpc toggle",
   }
 }
