@@ -27,30 +27,21 @@
   color: #FFF;
 }
 
-#custom-music,
-#tray,
-#backlight,
-#clock,
-#battery,
-#pulseaudio,
-#network,
-#cpu,
-#memory,
-#custom-lock,
-#custom-vpn {
-  padding: 0.7rem;
-}
-
 #custom-power {
-  padding-left: 0.5rem;
+  padding-left: .9rem;
 }
 
 #memory {
   color: #E5C890;
-  border-radius: 0px 5px 5px 0px;
+  padding-left: .7rem;
+}
+
+#cpu {
+  padding: 0 .5rem;
 }
 
 #battery {
+  padding: 0 .5rem;
   color: #A6D189;
 }
 
@@ -60,6 +51,7 @@
 
 #backlight {
   color: #E5C890;
+  padding: 0 .5rem;
 }
 
 #backlight,
@@ -69,21 +61,22 @@
 
 #pulseaudio {
   color: #EA999C;
-}
-
-#custom-music {
-  color: #CA9EE6;
-  border-radius: 5px;
-}
-
-#custom-lock {
-  border-radius: 5px 0px 0px 5px;
-  color: #BABBF1;
+  padding: 0 .5rem;
 }
 
 #custom-power {
   margin-right: 1rem;
-  border-radius: 0px 5px 5px 0px;
   color: #E78284;
 }
 
+#custom-vpn {
+  padding: 0 .3rem;
+}
+
+#network {
+  padding: 0 .5rem;
+}
+
+#custom-keyboard {
+  padding: 0 .3rem;
+}

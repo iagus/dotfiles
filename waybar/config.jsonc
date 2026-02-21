@@ -24,16 +24,16 @@
   },
   "clock": {
     "timezone": "Asia/Chongqing",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<big>Day {:%d}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%d/%m - %H:%M}"
   },
   "network": {
-    "format-wifi": "󰤢 {bandwidthDownBits}",
-    "format-ethernet": "󰈀 {bandwidthDownBits}",
-    "format-disconnected": "󰤠 No Network",
+    "format-wifi": "󰤢 ",
+    "format-ethernet": "󰈀 ",
+    "format-disconnected": "󰤠 ",
     "interval": 5,
     "hide-empty-text": true,
-    "tooltip": false
+    "tooltip-format": "{bandwidthDownBits}"
   },
   "cpu": {
     "interval": 1,
@@ -84,11 +84,12 @@
     "format": "⏻"
   },
   "custom/vpn": {
-    "format": " {text}",
-    "interval": 5,
+    "format": " ",
+    "interval": "once",
     "exec": "$HOME/.config/waybar/expressvpnctl_module.sh 2> /dev/null",
     "exec-if": "pgrep expressvpn",
-    "return-type": "json"
+    "return-type": "json",
+    "on-click": "$HOME/.config/waybar/expressvpnctl_module.sh 2> /dev/null"
   },
   "custom/keyboard": {
     "format": "{text}",
