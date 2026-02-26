@@ -20,15 +20,7 @@
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
 # font-family =
-font-family = JetbrainsMono Nerd Font
 # window-padding-x = 2
-background-opacity = 0.8
-
-# Enables quick terminal
-keybind = global:ctrl+0=toggle_quick_terminal
-
-# Focus keyboard on quick terminal
-quick-terminal-keyboard-interactivity=exclusive
 
 # # Spacing around the equals sign does not matter.
 # # All of these are identical:
@@ -49,3 +41,14 @@ quick-terminal-keyboard-interactivity=exclusive
 # # which is explained in the docs for that config option.
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
+
+font-family = JetbrainsMono Nerd Font
+background-opacity = 0.8
+
+# Enables quick terminal
+keybind = global:ctrl+0=toggle_quick_terminal
+
+# Focus keyboard on quick terminal
+quick-terminal-keyboard-interactivity=exclusive
+
+shell-integration-features=cursor, sudo, ssh-env, ssh-terminfo
