@@ -16,7 +16,8 @@ set $right l
 # Your preferred browser
 set $browser MOZ_ENABLE_WAYLAND=1 firefox-developer-edition
 # Your preferred terminal emulator
-set $term ghostty
+#set $term ghostty
+set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -93,9 +94,8 @@ input type:touchpad {
 }
 
 input type:keyboard {
-    # xkb_layout us
+    # xkb_layout es
     # xkb_variant nodeadkeys
-
     xkb_layout us,es
 }
 bindsym $mod+0 input type:keyboard xkb_switch_layout next
