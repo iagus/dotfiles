@@ -108,8 +108,8 @@ output "Unknown-1" {
 #
 # Basics:
 #
-    # Start a terminal
-    bindsym $mod+Return exec $term
+    # Start a launcher
+    bindsym $mod+Return exec $menu
 
     # Open browser
     bindsym $mod+x exec $browser
@@ -117,8 +117,8 @@ output "Unknown-1" {
     # Kill focused window
     bindsym $mod+q kill
 
-    # Start your launcher
-    bindsym $mod+Space exec $menu
+    # Start a terminal
+    bindsym $mod+Space exec $term
 
     # Toggle waybar
     bindsym $mod+y exec waybartoggle
