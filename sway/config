@@ -109,10 +109,10 @@ output "Unknown-1" {
 # Basics:
 #
     # Start a launcher
-    bindsym $mod+Return exec $menu
+    bindsym $mod+m exec $menu
 
     # Open browser
-    bindsym $mod+x exec $browser
+    bindsym $mod+b exec $browser
 
     # Kill focused window
     bindsym $mod+q kill
