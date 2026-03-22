@@ -117,8 +117,8 @@ output "Unknown-1" {
     # Kill focused window
     bindsym $mod+q kill
 
-    # Start a terminal
-    bindsym $mod+Space exec $term
+    # Start a terminal with tmux call
+    bindsym $mod+Space exec $term tmux
 
     # Toggle waybar
     bindsym $mod+y exec waybartoggle
