@@ -96,9 +96,7 @@
     "format": "{text} |",
     "interval": 1,
     "tooltip": false,
-
-    // position 1 in returning json IS the keyboard
-    "exec": "jq -r '.[1].xkb_active_layout_name' <(swaymsg --raw -t get_inputs)"
+    "exec": "jq -r '.[0] | .xkb_active_layout_name' <(swaymsg --raw -t get_inputs)"
   },
   "custom/mpd": {
     "format": "♪ {text}",
