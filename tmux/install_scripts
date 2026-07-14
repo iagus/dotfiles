@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd scripts
+
+for file in *; do
+  echo "Moving $file to ~/.local/bin"
+  ln -s "$(pwd)/$file" ~/.local/bin
+done
+
+echo "Done"
+
