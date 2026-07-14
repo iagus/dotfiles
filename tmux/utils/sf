@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Move this script to ~/.local/bin
+
+cd ../scripts
+
+script=$(ls | fzf) && exec $script
+
