@@ -1,0 +1,13 @@
+#!/bin/bash
+
+PROJECT=$(ls ~/code | fzf)
+
+if tmux has -t $PROJECT 2>/dev/null; then
+  echo 'Attaching to session'
+else
+  tmux new -d -c ~/code/$PROJECT -s $PROJECT -n main
+  tmux neww -n nvim -c ~/code/$PROJECT nvim .
+fi
+
+tmux attach -t $PROJECT
+
