@@ -3,10 +3,8 @@
 if tmux has-session -t vpn 2>/dev/null; then
     echo 'Attaching to vpn'
 else
-  tmux new-session -d -s vpn
-  tmux rename-window vpn
-  tmux send-keys 'ping 8.8.8.8' C-m
-  tmux split-window -h
+  tmux new -d -s vpn -n vpn ping 8.8.8.8
+  tmux splitw -h
   tmux send-keys 'expressvpnctl status' C-m
   tmux split-window -v
   tmux send-keys 'expressvpnctl monitor connectionstate' C-m

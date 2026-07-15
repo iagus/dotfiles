@@ -1,11 +1,10 @@
 #!/bin/bash
 
-if tmux has-session -t music 2>/dev/null; then
+if tmux has -t music 2>/dev/null; then
   echo 'Attaching to music'
 else
-  tmux new-session -d -s music
-  tmux rename-window rmpc
-  tmux send-keys rmpc C-m
+  tmux new -d -s music -n rmpc rmpc
 fi
 
-tmux attach-session -t music
+tmux attach -t music
+
