@@ -1,4 +1,3 @@
-#
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
@@ -27,8 +26,10 @@ set $header waybar
 ### Output configuration
 #
 
-# output * bg $HOME/Pictures/godzilla.jpg center
-output *  bg $HOME/Pictures/evangelion.jpg center
+output * bg $HOME/Pictures/godzilla.jpg center
+# output * bg $HOME/Pictures/evangelion.jpg center
+# output * bg $HOME/Pictures/arch-linux-blue.jpeg fill
+# output * bg $HOME/Pictures/spiderman.jpg fill
 
 # output * bg $HOME/Pictures/gundam-wallpaper.jpg fill
 # output * bg $HOME/Pictures/gundam-blue.png fill
@@ -97,7 +98,7 @@ input type:keyboard {
     # xkb_variant nodeadkeys
     xkb_layout us,es
 }
-bindsym $mod+0 input type:keyboard xkb_switch_layout next
+bindsym $mod+z input type:keyboard xkb_switch_layout next
 
 output "Unknown-1" {
   scale 2
@@ -118,7 +119,7 @@ output "Unknown-1" {
     bindsym $mod+q kill
 
     # Start a terminal with tmux call
-    bindsym $mod+Space exec $term tmux
+    bindsym $mod+Space exec $term
 
     # Toggle waybar
     bindsym $mod+y exec waybartoggle
@@ -177,16 +178,16 @@ output "Unknown-1" {
     # We just use 1-10 as the default.
 
     # Switch to workspace
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
+    bindsym $mod+6 workspace number 1
+    bindsym $mod+7 workspace number 2
+    bindsym $mod+8 workspace number 3
+    bindsym $mod+9 workspace number 4
 
     # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
-    bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+6 move container to workspace number 1
+    bindsym $mod+Shift+7 move container to workspace number 2
+    bindsym $mod+Shift+8 move container to workspace number 3
+    bindsym $mod+Shift+9 move container to workspace number 4
 
 #
 # Layout stuff:
